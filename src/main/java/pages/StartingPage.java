@@ -13,27 +13,39 @@ public class StartingPage {
 
     public StartingPage(WebDriver driver) {
         this.driver = driver;
-        loanAmount_tb = By.className("sc-eNQAEJ iNqEDq");
-        loanPurpose_dd = By.cssSelector("option");
-        checkRate_btn = By.cssSelector(".sc-brqgnP");
+        loanAmount_tb = By.name("desiredAmount");
+        loanPurpose_dd = By.cssSelector("select.iHtznt");
+        checkRate_btn = By.cssSelector("button");
     }
 
     public void checkRate(String loanAmount, String loanPurpose) {
-        this.getLoanAmountTextBox().sendKeys(loanAmount);
-        this.getLoanPurposeDropDown().selectByValue(loanPurpose);
-        this.getCheckRateButton().click();
+        this.setLoanAmount(loanAmount);
+        this.selectLoanPurpose(loanPurpose);
+        this.checkRate();
     }
 
-    private WebElement getLoanAmountTextBox() {
+    public WebElement getLoanAmountTextBox() {
         return this.driver.findElement(loanAmount_tb);
     }
 
-    private Select getLoanPurposeDropDown() {
+    public Select getLoanPurposeDropDown() {
         return new Select(this.driver.findElement(loanPurpose_dd));
     }
 
-    private WebElement getCheckRateButton() {
+    public WebElement getCheckRateButton() {
         return this.driver.findElement(checkRate_btn);
+    }
+
+    public void setLoanAmount(String loanAmount) {
+        this.getLoanAmountTextBox().sendKeys(loanAmount);
+    }
+
+    public void selectLoanPurpose(String loanPurpose) {
+        this.getLoanPurposeDropDown().selectByValue(loanPurpose);
+    }
+
+    public void checkRate() {
+        this.getCheckRateButton().click();
     }
 
 }
