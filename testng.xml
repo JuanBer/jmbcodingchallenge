@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Upgrade Coding Challenge">
+	<test name="API Tests">
+		<classes>
+			<class name="tests.EndpointTests" />
+		</classes>
+	</test>
+	<test name="FrontEnd Tests">
+		<classes>
+			<class name="tests.FrondEndTests" />
+		</classes>
+	</test>
+</suite>

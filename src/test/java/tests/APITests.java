@@ -15,7 +15,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import support.UsConstants;
 
-public class EndpointTests {
+public class APITests {
 
     private static RequestSpecification requestSpec;
     private static Response response;

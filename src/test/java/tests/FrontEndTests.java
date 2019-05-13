@@ -17,7 +17,7 @@ import pages.PersonalInformationPage;
 import pages.StartingPage;
 import support.LoanApplication;
 
-public class UITests {
+public class FrontEndTests {
     private WebDriver driver;
     private LoanApplication loanApplication = new LoanApplication();
     private WebDriverWait wait;
