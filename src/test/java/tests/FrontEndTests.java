@@ -32,7 +32,7 @@ public class FrontEndTests {
         driver.get("https://www.credify.tech/phone/nonDMFunnel");
         driver.manage().window().maximize();
         startingPage = new StartingPage(driver);
-        wait = new WebDriverWait(driver,10);
+        wait = new WebDriverWait(driver,20);
         wait.until(ExpectedConditions.presenceOfElementLocated(startingPage.getLoanAumountBy()));
         startingPage.checkRate(this.loanApplication.getLoanAmount(), this.loanApplication.getLoanPurpose());
         personalInformationPage = new PersonalInformationPage(driver);
