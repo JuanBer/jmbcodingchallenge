@@ -61,7 +61,7 @@ public class UITests {
     }
 
     @Test
-    public void pruebaUno() {
+    public void verifyLoanApplicationValues() {
         LoginPage loginPageTest;
         OfferPage offerPageTest;
         driver.get("https://www.credify.tech/portal/login");
