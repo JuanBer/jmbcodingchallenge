@@ -48,4 +48,8 @@ public class StartingPage {
         this.getCheckRateButton().click();
     }
 
+    public By getLoanAumountBy(){
+        return this.loanAmount_tb;
+    }
+
 }

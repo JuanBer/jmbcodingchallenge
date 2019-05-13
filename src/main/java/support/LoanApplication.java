@@ -6,6 +6,7 @@ public class LoanApplication {
     private String loanPurpose;
     private String loanApplicationPassword;
     private String loanAmountResult;
+    private String loanMonthlyPayment;
     private String loanTerm;
     private String interestRate;
     private String anualPercentageRate;
@@ -17,14 +18,14 @@ public class LoanApplication {
         this.loanApplicationPassword = "Test2468";
     }
 
-    public LoanApplication(BorrowerInformation borrower, String loanAmount, String loanPurpose,
-            String loanApplicationPassword, String loanAmountResult, String loanTerm, String interestRate,
-            String anualPercentageRate) {
+
+    public LoanApplication(BorrowerInformation borrower, String loanAmount, String loanPurpose, String loanApplicationPassword, String loanAmountResult, String loanMonthlyPayment, String loanTerm, String interestRate, String anualPercentageRate) {
         this.borrower = borrower;
         this.loanAmount = loanAmount;
         this.loanPurpose = loanPurpose;
         this.loanApplicationPassword = loanApplicationPassword;
         this.loanAmountResult = loanAmountResult;
+        this.loanMonthlyPayment = loanMonthlyPayment;
         this.loanTerm = loanTerm;
         this.interestRate = interestRate;
         this.anualPercentageRate = anualPercentageRate;
@@ -54,11 +55,11 @@ public class LoanApplication {
         this.loanPurpose = loanPurpose;
     }
 
-    public String getApplicationPassword() {
+    public String getLoanApplicationPassword() {
         return this.loanApplicationPassword;
     }
 
-    public void setApplicationPassword(String loanApplicationPassword) {
+    public void setLoanApplicationPassword(String loanApplicationPassword) {
         this.loanApplicationPassword = loanApplicationPassword;
     }
 
@@ -68,6 +69,14 @@ public class LoanApplication {
 
     public void setLoanAmountResult(String loanAmountResult) {
         this.loanAmountResult = loanAmountResult;
+    }
+
+    public String getLoanMonthlyPayment() {
+        return this.loanMonthlyPayment;
+    }
+
+    public void setLoanMonthlyPayment(String loanMonthlyPayment) {
+        this.loanMonthlyPayment = loanMonthlyPayment;
     }
 
     public String getLoanTerm() {
@@ -119,6 +128,11 @@ public class LoanApplication {
         return this;
     }
 
+    public LoanApplication loanMonthlyPayment(String loanMonthlyPayment) {
+        this.loanMonthlyPayment = loanMonthlyPayment;
+        return this;
+    }
+
     public LoanApplication loanTerm(String loanTerm) {
         this.loanTerm = loanTerm;
         return this;
@@ -136,11 +150,18 @@ public class LoanApplication {
 
     @Override
     public String toString() {
-        return "{" + " borrower='" + getBorrower() + "'" + ", loanAmount='" + getLoanAmount() + "'" + ", loanPurpose='"
-                + getLoanPurpose() + "'" + ", loanApplicationPassword='" + getApplicationPassword() + "'"
-                + ", loanAmountResult='" + getLoanAmountResult() + "'" + ", loanTerm='" + getLoanTerm() + "'"
-                + ", interestRate='" + getInterestRate() + "'" + ", anualPercentageRate='" + getAnualPercentageRate()
-                + "'" + "}";
+        return "{" +
+            " borrower='" + getBorrower() + "'" +
+            ", loanAmount='" + getLoanAmount() + "'" +
+            ", loanPurpose='" + getLoanPurpose() + "'" +
+            ", loanApplicationPassword='" + getLoanApplicationPassword() + "'" +
+            ", loanAmountResult='" + getLoanAmountResult() + "'" +
+            ", loanMonthlyPayment='" + getLoanMonthlyPayment() + "'" +
+            ", loanTerm='" + getLoanTerm() + "'" +
+            ", interestRate='" + getInterestRate() + "'" +
+            ", anualPercentageRate='" + getAnualPercentageRate() + "'" +
+            "}";
     }
-
+   
+    
 }
