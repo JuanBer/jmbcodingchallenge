@@ -163,4 +163,8 @@ public class PersonalInformationPage {
         this.getCheckRateButton().click();
     }
 
+    public By getHomeAddressTextBoxBy(){
+        return this.homeAddress_tb;
+    }
+
 }

@@ -4,12 +4,12 @@
 <suite name="Upgrade Coding Challenge">
 	<test name="API Tests">
 		<classes>
-			<class name="tests.EndpointTests" />
+			<class name="tests.APITests" />
 		</classes>
 	</test>
 	<test name="FrontEnd Tests">
 		<classes>
-			<class name="tests.FrondEndTests" />
+			<class name="tests.FrontEndTests" />
 		</classes>
 	</test>
 </suite>

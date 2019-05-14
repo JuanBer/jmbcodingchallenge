@@ -27,8 +27,8 @@ public class FrontEndTests {
         StartingPage startingPage;
         PersonalInformationPage personalInformationPage;
         OfferPage offerPage;
-        String projectPath = System.getProperty("user.dir")
-        System.setProperty("webdriver.chrome.driver", projectPath + "/drivers");
+        String projectPath = System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", projectPath + "/drivers/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.credify.tech/phone/nonDMFunnel");
         driver.manage().window().maximize();
@@ -37,6 +37,7 @@ public class FrontEndTests {
         wait.until(ExpectedConditions.presenceOfElementLocated(startingPage.getLoanAumountBy()));
         startingPage.checkRate(this.loanApplication.getLoanAmount(), this.loanApplication.getLoanPurpose());
         personalInformationPage = new PersonalInformationPage(driver);
+        wait.until(ExpectedConditions.presenceOfElementLocated(personalInformationPage.getHomeAddressTextBoxBy()));
         personalInformationPage.enterPersonalInfoAndCheckRate(
                         this.loanApplication.getBorrower().getFirtName(),
                         this.loanApplication.getBorrower().getLastName(),
