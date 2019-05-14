@@ -27,7 +27,8 @@ public class FrontEndTests {
         StartingPage startingPage;
         PersonalInformationPage personalInformationPage;
         OfferPage offerPage;
-        System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
+        String projectPath = System.getProperty("user.dir")
+        System.setProperty("webdriver.chrome.driver", projectPath + "/drivers");
         driver = new ChromeDriver();
         driver.get("https://www.credify.tech/phone/nonDMFunnel");
         driver.manage().window().maximize();
